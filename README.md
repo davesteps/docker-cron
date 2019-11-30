@@ -10,15 +10,13 @@ Shared docker volume
 - `docker run -it --name test2 -v data:/data nickel/cron bash`
 
 Start container
-`start ais-to-s3-1`
-
-Export container:
-`docker export <containername> | gzip > myapp.tgz`
+`docker start ais-to-s3-1`
 
 `chmod 400 key.pem`
-`scp -i "key.pem" aistos3.tgz ubuntu@35.178.87.3:~/ais`
-`docker import myapp.tgz myapp`
+`sudo crontab -e`
 
+# SWAP!
+https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04
 https://stackoverflow.com/questions/46721871/how-to-ssh-into-amazon-lightsail-without-putty
 
 ## Resources
